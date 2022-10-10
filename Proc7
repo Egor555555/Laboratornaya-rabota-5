@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+void invertdigits(int *k) {
+int tempi = *k;
+*k = 0;
+while (tempi != 0) {
+*k = *k * 10 + (tempi % 10);
+tempi /= 10;
+}
+}
+
+int main()
+{
+int i;
+for (i = 1;i <= 5;++i) {
+int k;
+cin >> k;
+invertdigits(&k);
+cout << k;
+}
+return 0;
+}
