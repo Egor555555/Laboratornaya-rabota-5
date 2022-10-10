@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+float calc(float a, float b, int op) {
+switch (op) {
+case 1:
+return a - b;
+break;
+case 2:
+return a * b;
+break;
+case 3:
+return a / b;
+break;
+default:
+return a + b;
+break;
+}
+}
+int main() {
+float a, b;
+int i, op;
+cin >> a >> b;
+for (i = 1;i <= 3;i++) {
+cin >> op;
+cout << calc(a, b, op);
+}return 0;
+}
