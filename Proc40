@@ -1,0 +1,27 @@
+#include "pt4.h"
+#include "cmath"
+using namespace std;
+float exp(float x, float eps)
+{
+float xi = 1, ni = 1, otvet = 0, an = 1;
+int i = 0;
+while (abs(an) > eps) {
+otvet += an;
+i++;
+xi *= x;
+ni *= i;
+an = xi / ni;
+}return otvet;
+}
+
+void Solve()
+{
+Task("Proc40");
+float x, eps;
+pt >> x;
+int i;
+for (i = 1; i <= 6; i++) {
+pt >> eps;
+pt << exp(x, eps);
+}
+}
